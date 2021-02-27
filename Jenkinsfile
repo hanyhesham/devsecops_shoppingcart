@@ -3,14 +3,8 @@ pipeline {
 
   stages {
     stage('Building image') {
-      steps{
-          script {
-             docker.withRegistry('hheshamrepo/shoppingchart', 'dockerhub') {
-                 def frappeimage = docker.build()
-                 frappeimage.push()
-                }
-              }
-           }
+        dockerImage = docker.build(hheshamrepo/shoppingchart:latest)
+        dockerImage.push()
        }
   }
 }
