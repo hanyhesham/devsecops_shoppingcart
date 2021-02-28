@@ -1,6 +1,6 @@
 FROM node:lts-alpine3.12
 
-npm install -g @vue/cli
+RUN npm install -g @vue/cli
 
 mkdir /app
 
