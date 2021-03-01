@@ -4,7 +4,7 @@ node {
   def dockerImage
 
   stage('Build image') {
-    dockerImage = docker.build("microops-dev/shoppingcart")
+    dockerImage = docker.build("microopsdev/shoppingcart")
   }
 
   stage('Push image') {
