@@ -3,7 +3,7 @@ pipeline {
 
   stages {
     stage('Building image') {
-        dockerImage = docker.build(hheshamrepo/shoppingchart:latest)
+        dockerImage = docker.build(hheshamrepo/shoppingchart)
         dockerImage.push()
        }
   }
