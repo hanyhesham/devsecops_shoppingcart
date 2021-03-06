@@ -15,7 +15,7 @@ node {
 
   stage('Update Deployment') {
       script {
-          sh '/snap/bin/kubectl patch deployment shoppingcart -n default -p \"{\\"spec\\": {\\"template\\": {\\"metadata\\": { \\"labels\\": { \\"redeploy\\": \\"$(date +%s)\\"}}}}}\"'
+          sh '/usr/local/bin/kubectl patch deployment shoppingcart -n default -p \"{\\"spec\\": {\\"template\\": {\\"metadata\\": { \\"labels\\": { \\"redeploy\\": \\"$(date +%s)\\"}}}}}\"'
     }
   }
 
